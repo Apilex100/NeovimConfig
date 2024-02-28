@@ -29,7 +29,7 @@ return {
             })
             lspconfig.jedi_language_server.setup({
                 capabilities = capabilities,
-                cmd = { "jedi-language-server.cmd", "--stdio" },
+                cmd = { "jedi-language-server.cmd" },
             })
             lspconfig.clangd.setup({
                 capabilities = capabilities,
