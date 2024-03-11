@@ -7,17 +7,14 @@ return {
             sources = {
                 null_ls.builtins.formatting.stylua,
                 null_ls.builtins.formatting.black,
-                null_ls.builtins.diagnostics.eslint_d,
+                -- null_ls.builtins.diagnostics.eslint_d,
                 null_ls.builtins.diagnostics.pylint,
                 null_ls.builtins.formatting.prettier.with({
-                    extra_args = function(params)
-                        return params.options
-                            and params.options.tabSize
-                            and {
-                                "--tab-width: 4",
-                                params.options.tabSize,
-                            }
-                    end,
+                    args = {
+                        params = {
+                            "--tab-width 4",
+                        },
+                    },
                 }),
             },
         })
