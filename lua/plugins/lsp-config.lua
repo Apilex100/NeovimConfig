@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "jedi_language_server", "clangd", "rust_analyzer" },
+				ensure_installed = { "lua_ls", "tsserver", "jedi_language_server", "clangd", "rust_analyzer", "gopls" },
 			})
 		end,
 	},
@@ -38,11 +38,15 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 				cmd = { "rust-analyzer.cmd" },
-				filetypes = { "rust" },
+			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+				cmd = { "gopls.cmd" },
 				settings = {
-					["rust-analyzer"] = {
-						diagnostics = {
-							enable = false,
+					gopls = {
+						completeUnimported = true,
+						analyses = {
+							unusedparams = true,
 						},
 					},
 				},

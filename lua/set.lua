@@ -23,5 +23,8 @@ vim.opt.scrolloff = 8
 
 vim.opt.updatetime = 50
 
+vim.g.rust_recommended_style = 0
+
 vim.opt.listchars = { tab = ">~", eol = "$" }
 vim.opt.list = true
+
