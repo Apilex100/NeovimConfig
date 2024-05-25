@@ -1,1 +1,1 @@
-This my neovim config for windows
+This my neovim config for linux
