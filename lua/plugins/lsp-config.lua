@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "jedi_language_server", "clangd", "rust_analyzer", "gopls" },
+				ensure_installed = { "lua_ls", "tsserver", "jedi_language_server", "clangd", "rust_analyzer"},
 			})
 		end,
 	},
@@ -21,35 +21,18 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
-				cmd = { "lua-language-server.cmd", "--stdio" },
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
-				cmd = { "typescript-language-server.cmd", "--stdio" },
 			})
 			lspconfig.jedi_language_server.setup({
 				capabilities = capabilities,
-				cmd = { "jedi-language-server.cmd" },
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
-				cmd = { "clangd.cmd", "--stdio" },
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
-				cmd = { "rust-analyzer.cmd" },
-			})
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-				cmd = { "gopls.cmd" },
-				settings = {
-					gopls = {
-						completeUnimported = true,
-						analyses = {
-							unusedparams = true,
-						},
-					},
-				},
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
