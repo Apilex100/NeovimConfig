@@ -11,8 +11,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "Q", "<nop>")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+vim.keymap.set("v", "<leader>gc", '"+y')
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("botright split")
+  vim.cmd("terminal")
+  vim.cmd("startinsert")
+end, { noremap = true, silent = true })
+
+vim.keymap.set("t", "<C-d>", "<C-\\><C-n>:q<CR>", { noremap = true, silent = true })
