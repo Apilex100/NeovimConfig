@@ -29,3 +29,4 @@ vim.g.rust_recommended_style = 0
 vim.opt.listchars = {eol = "$" }
 vim.opt.list = true
 
+vim.o.signcolumn = "number"
