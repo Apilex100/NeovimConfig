@@ -1,11 +1,11 @@
-#This my neovim config for linux
+# This my neovim config for linux
 
-##Prerequisite
+## Prerequisite
 ```
 sudo apt install -y unzip gcc python3-venv xclip ripgrep
 ```
 
-##Install Neovim
+## Install Neovim
 ```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
@@ -15,7 +15,7 @@ echo "export PATH="$PATH:/opt/nvim-linux-x86_64/bin" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-##Config Setup
+## Config Setup
 ```
 git clone git@github.com:Apilex100/NeovimConfig.git
 mv NeovimConfig ~/.config/nvim
