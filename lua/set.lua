@@ -6,9 +6,9 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 0
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 
 vim.opt.smartindent = true
 
@@ -25,8 +25,7 @@ vim.opt.updatetime = 50
 
 vim.g.rust_recommended_style = 0
 
--- vim.opt.listchars = { tab = ">~", eol = "$" }
-vim.opt.listchars = {eol = "$" }
 vim.opt.list = true
+vim.opt.listchars = { tab = '▸ ', trail = '·', eol = "$" }
 
 vim.o.signcolumn = "number"
