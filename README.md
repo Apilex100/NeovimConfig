@@ -2,7 +2,8 @@
 
 ## Prerequisite
 ```
-sudo apt install -y unzip gcc python3-venv xclip ripgrep
+sudo apt install -y unzip gcc python3-venv xclip ripgrep pkg-config libssl-dev
+curl https://sh.rustup.rs -sSf | sh
 ```
 
 ## Install Neovim
